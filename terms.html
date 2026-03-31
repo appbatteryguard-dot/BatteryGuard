@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BatteryGuard Terms of Use</title>
+  <meta name="description" content="BatteryGuard Terms of Use aligned with the current landing page and a GDPR / EU consumer-law aware structure.">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root{
+      --bg:#07111c;
+      --bg-2:#0c1725;
+      --panel:#0f1d2d;
+      --panel-2:#132335;
+      --text:#edf4ff;
+      --muted:#9fb0c7;
+      --line:rgba(255,255,255,.08);
+      --brand:#67e8a7;
+      --brand-2:#7aa8ff;
+      --warn:#ffcc80;
+      --danger:#ff9b9b;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height:1.65;
+      background:
+        radial-gradient(1200px 650px at 10% -10%, rgba(103,232,167,.10), transparent 45%),
+        radial-gradient(1000px 550px at 100% 0%, rgba(122,168,255,.14), transparent 38%),
+        linear-gradient(180deg, var(--bg), var(--bg-2));
+    }
+    a{color:var(--brand)}
+    a:hover{text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+    .topbar{
+      position:sticky; top:0; z-index:40;
+      background:rgba(7,17,28,.78);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .wrap{
+      min-height:72px;
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none; color:#fff; font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:14px; display:grid; place-items:center;
+      font-weight:900; color:#08101b;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow:0 12px 34px rgba(103,232,167,.22);
+    }
+    .nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{color:var(--muted); text-decoration:none; font-weight:600; font-size:.95rem}
+    .nav a.active,.nav a:hover{color:#fff}
+    .hero{padding:58px 0 22px}
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 12px; border-radius:999px;
+      background:rgba(103,232,167,.10);
+      border:1px solid rgba(103,232,167,.20);
+      color:var(--brand); font-size:.82rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+    }
+    h1{
+      margin:18px 0 12px;
+      font-size:clamp(2.2rem,4vw,4rem);
+      line-height:1.02; letter-spacing:-.04em;
+    }
+    .subtitle{max-width:840px; color:var(--muted); font-size:1.06rem}
+    .meta{display:flex; flex-wrap:wrap; gap:12px; margin-top:20px}
+    .meta span{
+      display:inline-flex; align-items:center; min-height:38px;
+      padding:8px 12px; border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line); color:var(--muted); font-size:.95rem;
+    }
+    .summary{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:28px 0 8px;
+    }
+    .summary .mini{
+      padding:18px; border-radius:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      box-shadow:0 16px 48px rgba(0,0,0,.18);
+    }
+    .summary strong{display:block; font-size:1.05rem; margin-bottom:6px}
+    .summary p{margin:0; color:var(--muted); font-size:.95rem}
+    .card{
+      margin:24px 0;
+      padding:28px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      box-shadow:0 18px 52px rgba(0,0,0,.22);
+    }
+    h2{margin:0 0 12px; font-size:1.5rem; letter-spacing:-.02em}
+    h3{margin:20px 0 8px; font-size:1.08rem}
+    p, li{color:var(--text)}
+    .muted{color:var(--muted)}
+    .notice, .warn, .danger{
+      border-radius:18px; padding:16px 18px; margin:14px 0;
+      border:1px solid var(--line);
+    }
+    .notice{background:rgba(103,232,167,.10); border-left:4px solid var(--brand)}
+    .warn{background:rgba(255,204,128,.10); border-left:4px solid var(--warn)}
+    .danger{background:rgba(255,155,155,.10); border-left:4px solid var(--danger)}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .toc{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:8px}
+    .toc a{
+      display:block; text-decoration:none; color:#fff; font-weight:600;
+      padding:12px 14px; border-radius:16px; background:rgba(255,255,255,.03); border:1px solid var(--line);
+    }
+    ul{padding-left:20px}
+    li+li{margin-top:8px}
+    table{width:100%; border-collapse:collapse; margin-top:14px; border:1px solid var(--line); border-radius:18px; overflow:hidden}
+    th,td{padding:14px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left}
+    th{background:rgba(255,255,255,.03)}
+    tr:last-child td{border-bottom:none}
+    .footer{padding:26px 0 52px; color:var(--muted); font-size:.94rem}
+    .footer-box{
+      border-top:1px solid var(--line); padding-top:22px;
+      display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    }
+    .small{font-size:.92rem}
+    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px}
+    @media (max-width:820px){
+      .summary,.grid,.toc{grid-template-columns:1fr}
+      .topbar .wrap{align-items:flex-start; padding-top:14px; padding-bottom:14px}
+    }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <span class="logo">BG</span>
+        <span>BatteryGuard</span>
+      </a>
+      <nav class="nav" aria-label="Legal navigation">
+        <a href="./">Back to site</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html" class="active">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Terms of Use · Clear conditions</span>
+      <h1>Simple. Honest.<br>No tricks.</h1>
+      <p class="subtitle">
+        These Terms of Use govern the BatteryGuard app, the BatteryGuard website, related paid features, smart-plug integrations,
+        support channels, and the accessory / affiliate-link section shown on the current landing page.
+      </p>
+      <div class="meta">
+        <span>Service: BatteryGuard</span>
+        <span>Contact: <a href="mailto:appbatteryguard@gmail.com">appbatteryguard@gmail.com</a></span>
+        <span>Last updated: 31 March 2026</span>
+      </div>
+      <div class="summary">
+        <div class="mini">
+          <strong>Main idea</strong>
+          <p>BatteryGuard is a battery-management and automation tool, not a guaranteed fail-safe safety system.</p>
+        </div>
+        <div class="mini">
+          <strong>Commercial model</strong>
+          <p>The landing page currently describes a free tier and a one-time Pro purchase with one year of updates included.</p>
+        </div>
+        <div class="mini">
+          <strong>Consumer protection</strong>
+          <p>Nothing here removes mandatory rights you may have under consumer or data-protection law.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Contents</h2>
+      <div class="toc">
+        <a href="#owner">1. Owner and operator</a>
+        <a href="#service">2. What BatteryGuard provides</a>
+        <a href="#eligibility">3. Eligibility and user duties</a>
+        <a href="#license">4. License</a>
+        <a href="#pricing">5. Free, Pro, and updates</a>
+        <a href="#hardware">6. Hardware and third parties</a>
+        <a href="#affiliate">7. Affiliate links and external shops</a>
+        <a href="#disclaimer">8. Important disclaimers</a>
+        <a href="#ip">9. Intellectual property</a>
+        <a href="#termination">10. Suspension and termination</a>
+        <a href="#law">11. Governing law</a>
+        <a href="#contact">12. Contact</a>
+      </div>
+    </section>
+
+    <section class="card" id="owner">
+      <h2>1. Owner and operating structure</h2>
+      <p>
+        BatteryGuard is owned by <strong>Alfred Herrero Santillana</strong> and is currently used under a <strong>temporary favorable assignment of use</strong>
+        in favor of <strong>El Calaix de les Eines SCCL</strong> (CIF <strong>F05401369</strong>).
+      </p>
+      <p>
+        Legal, support, and administrative communications regarding BatteryGuard may be sent to
+        <a href="mailto:appbatteryguard@gmail.com">appbatteryguard@gmail.com</a>.
+      </p>
+      <div class="warn small">
+        The owner’s full national ID number is not published on this public page for privacy and anti-fraud reasons.
+      </div>
+    </section>
+
+    <section class="card" id="service">
+      <h2>2. What BatteryGuard provides</h2>
+      <p>BatteryGuard is an Android application and related website intended to help users manage battery charging behavior, including features such as:</p>
+      <ul>
+        <li>live battery monitoring and charging information;</li>
+        <li>custom charge limits and full-screen alarms;</li>
+        <li>charging schedules and home-screen widgets where available;</li>
+        <li>charger comparison and charge-session analysis;</li>
+        <li>automatic power cutoff via supported smart plugs;</li>
+        <li>product recommendations and links to compatible accessories or external shops.</li>
+      </ul>
+      <p class="muted">
+        The exact set of available features may vary by app version, country, Android behavior, device compatibility, store edition, or whether you use the Free or Pro version.
+      </p>
+    </section>
+
+    <section class="card" id="eligibility">
+      <h2>3. Eligibility and user responsibilities</h2>
+      <ul>
+        <li>You are responsible for ensuring that your phone, charger, cable, electrical setup, and any smart plug you use are compatible and safe.</li>
+        <li>You are responsible for configuring limits, alarms, schedules, plug automations, and notification permissions correctly before relying on them.</li>
+        <li>You must use BatteryGuard lawfully and only on devices and networks you are authorized to use.</li>
+        <li>If local law requires parental consent or sets a minimum age for digital services, you must comply with that law.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="license">
+      <h2>4. License</h2>
+      <p>
+        Subject to these Terms and the rules of the store from which you obtained the app, BatteryGuard grants you a limited,
+        non-exclusive, non-transferable, revocable license to download, install, and use the app for personal or internal lawful use on supported devices.
+      </p>
+      <p>You may not, except where mandatory law permits it:</p>
+      <ul>
+        <li>copy, resell, rent, sublicense, or distribute the app;</li>
+        <li>reverse engineer, decompile, or create derivative works of the app;</li>
+        <li>circumvent technical restrictions or security measures;</li>
+        <li>use BatteryGuard in a fraudulent, abusive, or misleading way.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="pricing">
+      <h2>5. Free version, Pro version, pricing, and updates</h2>
+      <p>
+        The current landing page describes BatteryGuard as having a free version and a <strong>Pro</strong> version offered as a <strong>one-time purchase</strong>, currently presented as <strong>€4.99</strong>.
+        The same landing page also states that Pro includes <strong>1 year of updates</strong>, and that any year-two renewal would be optional and only relevant if meaningful new features are offered.
+      </p>
+      <ul>
+        <li>Prices, taxes, currency conversion, billing, refunds, and chargebacks are governed first by the rules of the store or payment platform you use, plus any mandatory law that applies to you.</li>
+        <li>BatteryGuard may verify purchase entitlement in order to unlock paid features and prevent fraud or abuse.</li>
+        <li>Nothing in these Terms removes mandatory consumer rights that apply under your local law.</li>
+        <li>The app may receive bug fixes, compatibility updates, or feature changes over time.</li>
+      </ul>
+      <div class="notice small">
+        If you want the legal text to be future-proof, keep the marketing promise on the landing page synchronized with the same wording in the store listing and inside the app.
+      </div>
+    </section>
+
+    <section class="card" id="hardware">
+      <h2>6. Smart plugs, hardware compatibility, and third-party services</h2>
+      <p>
+        Some BatteryGuard features depend on third-party hardware, firmware, Bluetooth, Wi-Fi, router configuration, local-network availability,
+        electrical conditions, or vendor ecosystems outside BatteryGuard’s control.
+      </p>
+      <ul>
+        <li>Supported devices are those listed in the app or on the website at the relevant time.</li>
+        <li>Compatibility can change because of Android updates, manufacturer changes, firmware updates, or third-party API / ecosystem changes.</li>
+        <li>BatteryGuard does not manufacture third-party smart plugs, chargers, power banks, or cables unless expressly stated.</li>
+        <li>Third-party devices and services are governed by their own terms, warranties, and privacy policies.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="affiliate">
+      <h2>7. Affiliate links and external shops</h2>
+      <p>
+        BatteryGuard may show links to external sellers or marketplaces, including affiliate links.
+        If you click those links or purchase through them, BatteryGuard may receive a commission at no additional cost to you.
+      </p>
+      <ul>
+        <li>Availability, shipping, warranties, returns, pricing errors, and after-sales support are the responsibility of the external merchant or platform.</li>
+        <li>BatteryGuard is not a reseller of those external products unless explicitly stated.</li>
+        <li>You should review the external seller’s terms and privacy policy before purchasing.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="disclaimer">
+      <h2>8. Important operational and liability disclaimers</h2>
+      <div class="danger">
+        BatteryGuard is a convenience, monitoring, and automation tool. It is not a certified safety system, not an emergency protection device, and not a guaranteed fail-safe mechanism.
+      </div>
+      <ul>
+        <li>Charge cutoff, alarms, schedules, widgets, or automations can fail because of Android restrictions, battery-reporting delays, vendor firmware behavior, connectivity issues, reboot events, disabled permissions, low-power modes, or third-party outages.</li>
+        <li>BatteryGuard does not guarantee a specific battery lifespan increase, charging accuracy, or a particular battery-health result.</li>
+        <li>You remain responsible for supervising unsafe accessories, damaged cables, overheating, unusual smells, electrical faults, or any other high-risk condition.</li>
+        <li>To the fullest extent permitted by law, BatteryGuard is not liable for indirect, incidental, consequential, or special damages arising from use of the app or from third-party products and services.</li>
+        <li>Where liability cannot legally be excluded, it is limited to the minimum extent permitted by applicable law.</li>
+      </ul>
+      <div class="warn small">
+        This clause is especially important because the landing page states that BatteryGuard can physically cut charging through smart plugs. That is a useful feature, but legally it should never be framed as an absolute guarantee.
+      </div>
+    </section>
+
+    <section class="card" id="ip">
+      <h2>9. Intellectual property</h2>
+      <p>
+        The BatteryGuard name, branding, app, website content, copy, layout, graphics, software, and related materials are protected by intellectual-property law unless a specific element is clearly marked otherwise.
+      </p>
+      <p>
+        Third-party trademarks, product names, or marketplace names referenced for compatibility or comparison remain the property of their respective owners.
+      </p>
+    </section>
+
+    <section class="card" id="termination">
+      <h2>10. Suspension, discontinuation, and changes</h2>
+      <p>
+        BatteryGuard may suspend or limit access to features, integrations, or the service itself if reasonably necessary for maintenance, security, legal compliance, abuse prevention, or technical changes.
+      </p>
+      <p>
+        BatteryGuard may also update the app, the website, these Terms, or the Privacy Policy over time. Continued use after an update takes effect means you accept the revised Terms, except where applicable law requires a different process.
+      </p>
+    </section>
+
+    <section class="card" id="law">
+      <h2>11. Governing law and consumer rights</h2>
+      <p>
+        These Terms are governed by the laws of Spain, without prejudice to any mandatory consumer-protection, privacy, or other non-waivable rights that apply in your country of residence.
+      </p>
+      <p>
+        If you are a consumer, mandatory jurisdiction rules may allow you to bring claims before the courts or authorities that protect consumers in your place of residence.
+      </p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>12. Contact</h2>
+      <p>
+        For support, legal notices, privacy requests, or questions about these Terms, contact:
+        <a href="mailto:appbatteryguard@gmail.com">appbatteryguard@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer-box">
+      <div>
+        <strong>BatteryGuard</strong><br>
+        Terms of Use for the BatteryGuard app and website.
+      </div>
+      <div class="small">
+        Contact: <a href="mailto:appbatteryguard@gmail.com">appbatteryguard@gmail.com</a><br>
+        © 2026 BatteryGuard. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
